@@ -76,6 +76,8 @@ public class AfterSplashScreen extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		////This isc lkvldkl;dkl;kvl;kvl;sdfk,;',f,;,f;,
+		
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
