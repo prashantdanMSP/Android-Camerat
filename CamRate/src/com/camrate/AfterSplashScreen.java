@@ -88,6 +88,7 @@ public class AfterSplashScreen extends Activity {
 		uiHelper.onCreate(savedInstanceState);
 		context = AfterSplashScreen.this;
         //test by prashantdan
+		//test by vishal
 		init();
 	}
 
