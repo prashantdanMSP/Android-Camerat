@@ -91,6 +91,10 @@ public class AfterSplashScreen extends Activity {
 		//test by vishal
         //next change test2..
 		init();
+		
+		/*test vishal 1 change*/
+		
+		
 	}
 
 	private void init() {
