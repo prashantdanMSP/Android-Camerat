@@ -89,6 +89,7 @@ public class AfterSplashScreen extends Activity {
 		context = AfterSplashScreen.this;
         //test by prashantdan
 		//test by vishal
+        //next change test2..
 		init();
 	}
 
