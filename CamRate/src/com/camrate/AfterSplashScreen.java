@@ -85,6 +85,7 @@ public class AfterSplashScreen extends Activity {
 		uiHelper = new UiLifecycleHelper(this, sessionStatusCallback);
 		uiHelper.onCreate(savedInstanceState);
 		context = AfterSplashScreen.this;
+        //test by prashantdan
 		init();
 	}
 
