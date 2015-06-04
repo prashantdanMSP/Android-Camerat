@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white" >
+
+    <RelativeLayout
+        android:id="@+id/relativecmnt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/userimg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/noimageuser"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tvusername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/tvlastseen"
+            android:layout_toRightOf="@+id/userimg"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/Black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tvcommentdesc"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <ImageView
+            android:id="@+id/imglstseen"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tvlastseen"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/clocksymbol" />
+
+        <TextView
+            android:id="@+id/tvlastseen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvcommentdesc"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/imglstseen"
+            android:text=""
+            android:textColor="@color/lblcommentago"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tvcommentdesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvusername"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/userimg"
+            android:autoLink="web"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

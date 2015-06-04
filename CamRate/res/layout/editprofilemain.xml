@@ -1,0 +1,480 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/include_layout"
+        layout="@layout/customtitlebar" />
+
+    <LinearLayout
+        android:id="@+id/lineareditprofile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_layout"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/chkProfState"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:background="@drawable/btn_themebg"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Profile Info"
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/chkAboutState"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/btn_themebg_unsel"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="About You"
+            android:textAlignment="center"
+            android:textColor="@color/White"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewdiv"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/lineareditprofile"
+        android:layout_marginTop="10dp"
+        android:background="@color/viewdivider" />
+
+    <ScrollView
+        android:id="@+id/scrollView1Profile"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/viewdiv"
+        android:layout_centerHorizontal="true"
+        android:scrollbars="none"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/relativeditprofile"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imgeditprofpic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/addprofilepic" />
+
+                <RelativeLayout
+                    android:id="@+id/rel_editPic"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imgeditprofpic" >
+
+                    <TextView
+                        android:id="@+id/txteditusername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:text=""
+                        android:textColor="@color/Black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txtedituseremail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/txteditusername"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_horizontal"
+                        android:text=""
+                        android:textColor="@color/edtemail"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btneditphoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/txtedituseremail"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@null"
+                        android:gravity="center_horizontal"
+                        android:text="Tap avatar to upload new image"
+                        android:textColor="@color/lbl_color_email"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/realtiveeditprofile2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeditprofile" >
+
+                <EditText
+                    android:id="@+id/editprof_edt_uname"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/background_boxfill"
+                    android:ems="10"
+                    android:hint="Username"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/editprof_edt_surname"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/editprof_edt_uname"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_boxfill"
+                    android:ems="10"
+                    android:hint="Surname"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/editprof_edt_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/editprof_edt_surname"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_boxfill"
+                    android:gravity="top"
+                    android:hint="About Me"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine"
+                    android:maxLength="75"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rel_Privacy"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editprof_edt_desc"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/txtlblprivacy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_toLeftOf="@+id/txtvalueprivacy"
+                        android:gravity="center"
+                        android:text="Turn Privacy ON to approve follow requests and your photos will only be visible to your followers."
+                        android:textColor="@color/lbl_privacy"
+                        android:textSize="12sp" />
+
+                    <ToggleButton
+                        android:id="@+id/btnprivacyonoff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/toggel_switch"
+                        android:button="@null"
+                        android:textOff=""
+                        android:textOn="" />
+
+                    <TextView
+                        android:id="@+id/txtvalueprivacy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toLeftOf="@+id/btnprivacyonoff"
+                        android:text="Privacy Off"
+                        android:textColor="@color/lbl_color_email"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollView1About"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/viewdiv"
+        android:layout_centerHorizontal="true"
+        android:scrollbars="none"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/relativeditprofile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/imgeditprofpic"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/noimageuser" />
+
+                <TextView
+                    android:id="@+id/txteditusername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignTop="@+id/imgeditprofpic"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/imgeditprofpic"
+                    android:gravity="center_horizontal"
+                    android:text="UserName"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/txt_label_near"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txteditusername"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@+id/imgeditprofpic"
+                    android:gravity="center_horizontal"
+                    android:text="These bits are optional, but fill them in to help make CamRate stats feature more accurate!	"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/realtiveeditprofile2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeditprofile"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" >
+
+                <LinearLayout
+                    android:id="@+id/linearlblcountry"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/txtlbl_country"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:text="Select Your Country"
+                        android:textColor="@color/lbl_color"
+                        android:textSize="@dimen/lblsize" />
+
+                    <TextView
+                        android:id="@+id/txtlbl_country_req"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.50"
+                        android:text="(optional)"
+                        android:textColor="@color/lbl_color_op"
+                        android:textSize="@dimen/lblsize" />
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/sp_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/linearlblcountry"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/spbg"
+                    android:entries="@array/country_arrays"
+                    android:prompt="@string/cntry" />
+
+                <LinearLayout
+                    android:id="@+id/linearlblcity"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sp_country"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/txtlbl_city"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:text="Enter Your City"
+                        android:textColor="@color/lbl_color"
+                        android:textSize="@dimen/lblsize" />
+
+                    <TextView
+                        android:id="@+id/txtlbl_city_req"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.50"
+                        android:text="(optional)"
+                        android:textColor="@color/lbl_color_op"
+                        android:textSize="@dimen/lblsize" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/sp_city"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/linearlblcity"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/background_boxfill"
+                    android:ems="10"
+                    android:hint="@string/city"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/linearlblgender"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sp_city"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/txtlbl_gender"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:text="Select Your Gender"
+                        android:textColor="@color/lbl_color"
+                        android:textSize="@dimen/lblsize" />
+
+                    <TextView
+                        android:id="@+id/txtlbl_gender_req"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.50"
+                        android:text="(optional)"
+                        android:textColor="@color/lbl_color_op"
+                        android:textSize="@dimen/lblsize" />
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/sp_gender"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/linearlblgender"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/spbg"
+                    android:prompt="@string/gender" />
+
+                <LinearLayout
+                    android:id="@+id/linearlblbdate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sp_gender"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/txtlbl_bdate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.50"
+                        android:text="Select Your BirthDay"
+                        android:textColor="@color/lbl_color"
+                        android:textSize="@dimen/lblsize" />
+
+                    <TextView
+                        android:id="@+id/txtlbl_bdate_req"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.50"
+                        android:text="(optional)"
+                        android:textColor="@color/lbl_color_op"
+                        android:textSize="@dimen/lblsize" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnbday"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/linearlblbdate"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/spbg"
+                    android:text="@string/bday"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

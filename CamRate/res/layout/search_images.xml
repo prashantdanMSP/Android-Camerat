@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <include
+        android:id="@+id/include_layout"
+        layout="@layout/customtitlebar" />
+
+    <RelativeLayout
+        android:id="@+id/relativesearch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_layout" >
+
+        <EditText
+            android:id="@+id/serchText1"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dip"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:ems="10"
+            android:hint="search"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:lines="1"
+            android:singleLine="true"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="12dip" >
+        </EditText>
+
+        <Button
+            android:id="@+id/btnclose"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/close"
+            android:gravity="left"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativesearch"
+        android:layout_marginBottom="60dip" >
+
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#FFF"
+            android:columnWidth="120px"
+            android:gravity="center"
+            android:horizontalSpacing="5px"
+            android:numColumns="3"
+            android:padding="5dip"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5px" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

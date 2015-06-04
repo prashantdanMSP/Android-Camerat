@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <com.camrate.settings.CustomItemTitle
+        android:key="lblInviteFriTitle"
+        android:layout="@layout/custom_pref_new"
+        android:title="Community" />
+
+    <com.camrate.settings.CustomItem
+        android:key="prefInviteFriends"
+        android:layout="@layout/custom_pref"
+        android:title="Invite Friends" />
+    <com.camrate.settings.CustomItem
+        android:key="prefManageBlockList"
+        android:layout="@layout/custom_pref"
+        android:title="Manage Block List" />
+
+    <com.camrate.settings.CustomItemTitle
+        android:key="lblInviteFriTitle"
+        android:layout="@layout/custom_pref_new"
+        android:title="Sharing" />
+
+    <com.camrate.settings.TogglePreference
+        android:icon="@drawable/switchbg"
+        android:key="toggle_facebookshare"
+        android:summary="Facebook Sharing"
+        android:title="Facebook Sharing" />
+    <com.camrate.settings.TogglePreference
+        android:icon="@drawable/switchbg"
+        android:key="toggle_TwitShare"
+        android:summary="Twitter Sharing"
+        android:title="Twitter Sharing" />
+    <com.camrate.settings.TogglePreference
+        android:icon="@drawable/switchbg"
+        android:key="toggle_TumbShare"
+        android:summary="Tumblr Sharing"
+        android:title="Tumblr Sharing" />
+
+    <com.camrate.settings.CustomItemTitle
+        android:key="lblInviteFriTitle"
+        android:layout="@layout/custom_pref_new"
+        android:title="Preferences" />
+
+    <com.camrate.settings.TogglePreference
+        android:key="prefPushNotif"
+        android:summary="Push Notification"
+        android:title="Push Notification" />
+
+    <com.camrate.settings.CustomItem
+        android:key="prefChangePass"
+        android:layout="@layout/custom_pref"
+        android:title="Change Password" />
+
+    <com.camrate.settings.TogglePreference
+        android:key="prefprivacy"
+        android:summary="Privacy"
+        android:title="Privacy" />
+    <com.camrate.settings.TogglePreference
+        android:key="prefAutoSave"
+        android:summary="Auto Save Photos"
+        android:title="Auto Save Photos" />
+
+    <com.camrate.settings.CustomItemTitle
+        android:key="lblInviteFriTitle"
+        android:layout="@layout/custom_pref_new"
+        android:title="Legal &amp; FAQ" />
+
+    <com.camrate.settings.CustomItem
+        android:key="prefTofService"
+        android:layout="@layout/custom_pref"
+        android:title="Terms of Service" />
+    <com.camrate.settings.CustomItem
+        android:key="prefPrivacyPolicy"
+        android:layout="@layout/custom_pref"
+        android:title="Privacy Policy" />
+    <com.camrate.settings.CustomItem
+        android:key="prefCodeofconduct"
+        android:layout="@layout/custom_pref"
+        android:title="Code of Conduct" />
+    <com.camrate.settings.CustomItem
+        android:key="prefFAQ"
+        android:layout="@layout/custom_pref"
+        android:title="FAQ" />
+
+    <com.camrate.settings.CustomItemTitle
+        android:key="lblInviteFriTitle"
+        android:layout="@layout/custom_pref_new"
+        android:title="About CamRate" />
+
+    <com.camrate.settings.CustomItem
+        android:key="prefContactUs"
+        android:layout="@layout/custom_pref"
+        android:title="Contact Us" />
+    <com.camrate.settings.CustomItem
+        android:key="prefFeedback"
+        android:layout="@layout/custom_pref"
+        android:title="Feedback" />
+    <com.camrate.settings.CustomItem
+        android:key="prefAboutUs"
+        android:layout="@layout/custom_pref"
+        android:title="About Us" />
+    <com.camrate.settings.CustomItem
+        android:key="prefRateUS"
+        android:layout="@layout/custom_pref"
+        android:title="Rate Us on Play Store" />
+    <com.camrate.settings.CustomItem
+        android:key="prefSeeVideo"
+        android:layout="@layout/custom_pref"
+        android:title="Watch Promo Video" />
+
+    <com.camrate.settings.CustomVersionTitle
+        android:key="prefVersion"
+        android:layout="@layout/version"
+        android:title="Version" />
+
+    <com.camrate.settings.CustomItemTitle
+        android:key="lblInviteFriTitle"
+        android:layout="@layout/custom_pref_new"
+        android:title=" " />
+
+    <com.camrate.settings.CustomItem
+        android:key="prefLogOut"
+        android:layout="@layout/custom_pref"
+        android:title="Logout" />
+
+</PreferenceScreen>

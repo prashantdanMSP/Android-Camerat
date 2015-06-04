@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white" >
+
+    <include
+        android:id="@+id/include_layout"
+        layout="@layout/customtitlebar" />
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/listComment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bbar"
+        android:layout_below="@+id/include_layout" >
+    </com.baoyz.swipemenulistview.SwipeMenuListView>
+
+    <ListView
+        android:id="@+id/listfollowers"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_above="@+id/bbar"
+        android:layout_below="@+id/include_layout"
+        android:background="#fff"
+        android:stackFromBottom="true"
+        android:transcriptMode="normal"
+        android:visibility="invisible" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/bbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp" >
+
+        <EditText
+            android:id="@+id/edt_comments"
+            android:layout_width="match_parent"
+            android:layout_height="65dip"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/btn_sendComments"
+            android:background="@drawable/commentbg"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="Type your comment here..."
+            android:inputType="textMultiLine"
+            android:maxLength="140"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btn_sendComments"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="58dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/btn_themebg"
+            android:text="Send"
+            android:textColor="@color/White"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

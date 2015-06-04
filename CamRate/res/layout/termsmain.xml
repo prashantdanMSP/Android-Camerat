@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/include_layout"
+        layout="@layout/customtitlebar" />
+
+    <LinearLayout
+        android:id="@+id/lineareditprofile"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_layout"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <Button
+            android:id="@+id/chkTerms"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@color/Theme_Color"
+            android:text="Terms of service"
+            android:textColor="@color/White"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/chkPrivacy"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:background="@color/btnsearchunsel"
+            android:text="Privacy Policy"
+            android:textColor="@color/White"
+            android:textSize="11sp" />
+
+        <Button
+            android:id="@+id/chkCode"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:background="@color/btnsearchunsel"
+            android:text="Code of Conduct"
+            android:textColor="@color/White"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearterms"
+        android:layout_below="@+id/lineareditprofile" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearterms"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txtlblTerms"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="By clicking Agree,you agree to Terms of Condition,Privacy Policy &amp; Code of Conduct"
+            android:textSize="13sp"/>
+
+        <LinearLayout
+            android:id="@+id/lineartwo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnAgree"
+                android:layout_width="150dp"
+                android:layout_height="37dp"
+                android:background="@color/Theme_Color"
+                android:text="Agree"
+                android:textColor="@color/White"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="150dp"
+                android:layout_height="37dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/btnbg"
+                android:text="Cancel"
+                android:textColor="@color/Theme_Color"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

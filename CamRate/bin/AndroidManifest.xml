@@ -1,0 +1,568 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.camrate"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <permission
+        android:name="com.camrate.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-feature android:name="android.hardware.microphone" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.screen.portrait" />
+    <uses-feature android:name="android.hardware.camera.front" />
+
+    <permission
+        android:name="android.permission.FLASHLIGHT"
+        android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
+        android:protectionLevel="normal" />
+
+    <uses-permission android:name="com.camrate.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_OWNER_DATA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <permission
+        android:name="com.camrate.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.camrate.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="com.camrate.volley.AppController"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AfterSplashScreen"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.camrate.settings.SettingsActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="settingsharesample"
+                    android:scheme="settingshaeroauth" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="settingtumblrok"
+                    android:scheme="settingtumblrauth" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.camrate.settings.ContactUsActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.camrate.settings.ContactUsActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.camrate.settings.FacebookFriendsActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.camrate.settings.FacebookFriendsActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.camrate.settings.InviteFriendsActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.camrate.settings.InviteFriendsActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.camrate.settings.FeedbackActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.camrate.settings.FeedbackActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.camrate.settings.FeedbackActivityFinish"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.camrate.settings.FeedbackActivityFinish" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.camrate.settings.BlockListActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.camrate.settings.BlockListActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.camrate.settings.SeeVideoActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.camrate.settings.SeeVideoActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.camrate.settings.ChangePasswordActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.camrate.settings.ChangePasswordActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.camrate.settings.FeedbackQuestionActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.camrate.settings.FeedbackQuestionActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.camrate.tools.ShowSettingContent"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Login"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.camrate.RotateImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.camrate.VideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.camrate.SecondCameraTab"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.camrate.RateItScreen"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.camrate.RateItScreen1"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.camrate.FilterScreen"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.camrate.SearchZoom"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name="com.camrate.ShareItScreen"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="sharesample"
+                    android:scheme="shaeroauth" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="tumblrok"
+                    android:scheme="tumblrauth" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ShareItScreen1"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="sharesample1"
+                    android:scheme="shaeroauth1" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="tumblrok1"
+                    android:scheme="tumblrauth1" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Register"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name=".Register1"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name=".TermsMain"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.camrate.EditPost"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name=".VideoViewActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".MyFeed"
+            android:launchMode="singleInstance"
+            android:theme="@style/CustomTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="camrate"
+                    android:scheme="twitauth" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SocialSharing"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="t4jsample"
+                    android:scheme="oauth" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.camrate.MoreSharing"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name=".ForgotPassword"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name=".GridViewListBaseActivity"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name=".NewestGridActivity"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name=".CommentActivity"
+            android:theme="@style/CustomTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SearchImageFromWeb"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name=".PostDetail"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name=".PostLocation_Detail"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.camrate.explore.SlidingDrawerActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.camrate.profile.NotificationPostDetail"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.camrate.search.Search"
+            android:launchMode="singleInstance"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.camrate.search.SearchTagsDetail"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.camrate.search.SearchLocationDetail"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.camrate.profile.UserProfile"
+            android:launchMode="singleInstance"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.camrate.profile.GeneralUserProfile"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.camrate.profile.LevelExplained"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.camrate.profile.Following"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.camrate.profile.EditProfile"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.camrate.profile.Followers"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.camrate.profile.UserInvestorBadge"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.camrate.settings.ShowContactsActivity"
+            android:label="@string/title_activity_show_contacts" >
+        </activity>
+        <activity
+            android:name="com.camrate.settings.TwitterFriendsActivity"
+            android:label="@string/title_activity_twitter_friends" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="t4jsample1"
+                    android:scheme="oauth1" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.camrate.profile.Notification"
+            android:theme="@style/CustomTheme" />
+
+        <service
+            android:name="com.camrate.BroadcastServiveFB"
+            android:enabled="true" />
+
+        <receiver android:name="com.camrate.FBReceiver" >
+            <intent-filter>
+                <action android:name="com.camrate.fb_share" >
+                </action>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.camrate.BroadcastServiveTwitter"
+            android:enabled="true" >
+        </service>
+
+        <receiver android:name="com.camrate.TwitterReceiver" >
+            <intent-filter>
+                <action android:name="com.camrate.Twitter_share" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.camrate.BroadcastServiveTumblr"
+            android:enabled="true" >
+        </service>
+
+        <receiver android:name="com.camrate.TumblrReceiver" >
+            <intent-filter>
+                <action android:name="com.camrate.Tumblr_share" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCMT4bVNP6FnkcrfIGXDuKSXa97V7Z67fY" />
+
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <activity
+            android:name="com.camrate.share.ListViewActivity"
+            android:theme="@style/CustomTheme" >
+        </activity>
+        <activity
+            android:name="com.camrate.share.ManuallyAdd"
+            android:theme="@style/CustomTheme" >
+        </activity>
+        <activity
+            android:name="com.camrate.share.ContactsList"
+            android:theme="@style/CustomTheme" >
+        </activity>
+        <activity
+            android:name="com.camrate.share.ListViewActivity1"
+            android:theme="@style/CustomTheme" >
+        </activity>
+        <activity
+            android:name="com.camrate.search.StatsScreen"
+            android:theme="@style/CustomTheme" >
+        </activity>
+        <activity
+            android:name="com.camrate.ThankYou"
+            android:theme="@style/CustomTheme" >
+        </activity>
+        <activity
+            android:name="ResonForReport"
+            android:theme="@style/CustomTheme" >
+        </activity>
+        <!-- gcm notification -->
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.camrate" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".GCMIntentService" />
+
+        <activity
+            android:name=".tabs.TabSample"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" >
+        </activity>
+        <activity
+            android:name=".tabs.TabGroup1Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".tabs.TabGroup2Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".tabs.TabGroup3Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".tabs.TabGroup4Activity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".tabs.TabGroup5Activity" >
+        </activity>
+        <activity
+            android:name="PostDetail1"
+            android:theme="@style/CustomTheme" >
+        </activity>
+        <activity
+            android:name="AlertFollowers"
+            android:theme="@style/CustomTheme" >
+        </activity>
+        <activity
+            android:name="com.camrate.InviteFriends"
+            android:theme="@style/CustomTheme" >
+        </activity>
+        <activity
+            android:name=".settings.ShowContactsMobile"
+            android:theme="@style/CustomTheme" >
+        </activity>
+        <activity
+            android:name="com.camrate.settings.TwitterFriends"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="friendsample"
+                    android:scheme="friendsoauth" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.camrate.UserProfileChild"
+            android:launchMode="singleInstance"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.camrate.share.TwitterFriendsActivity"
+            android:theme="@style/CustomTheme" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relSlider"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White" >
+
+    <LinearLayout
+        android:id="@+id/linearRateMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearBubble"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/relLeftRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/ratingStar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5" >
+
+                <ImageView
+                    android:id="@+id/imgStar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:src="@drawable/star" />
+
+                <ImageView
+                    android:id="@+id/imgStar2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:src="@drawable/star_unsel" />
+
+                <ImageView
+                    android:id="@+id/imgStar3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:src="@drawable/star_unsel" />
+
+                <ImageView
+                    android:id="@+id/imgStar4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:src="@drawable/star_unsel" />
+
+                <ImageView
+                    android:id="@+id/imgStar5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:src="@drawable/star_unsel" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/seekBar1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ratingStar"
+                android:layout_marginTop="10dp"
+                android:max="100"
+                android:maxHeight="2dp"
+                android:progressDrawable="@drawable/progress"
+                android:thumb="@drawable/thumbseek"
+                android:thumbOffset="0px" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relRightRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/relLeftRate"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/imgSubmitRated"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/btnrate_posted" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

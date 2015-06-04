@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/txtlblhashtag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dip"
+        android:text="#"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/Black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtValueTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/txtValueCount"
+        android:layout_toRightOf="@+id/txtlblhashtag"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:singleLine="true"
+        android:text="Tag"
+        android:textColor="@color/Black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtValueCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="70dip"
+        android:layout_toLeftOf="@+id/txtlblcount"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/lblsearchpost"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtlblcount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dip"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/lblsearchpost"
+        android:textSize="14sp" /><ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="18dip"
+        android:layout_height="18dip"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dip"
+        android:src="@drawable/list_arrow1" />
+
+</RelativeLayout>

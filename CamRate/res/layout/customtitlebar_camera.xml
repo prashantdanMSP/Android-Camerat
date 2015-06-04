@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="46dp"
+    android:layout_gravity="center_vertical"
+    android:background="@color/titlebarbg" >
+
+    <TextView
+        android:id="@+id/lblInviteFriTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="Cam It "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnRotateBack"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:drawableLeft="@drawable/btnback"
+        android:onClick="onBack"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="15dp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnCameraNext"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:onClick="onNext"
+        android:text="Next"
+        android:textColor="@color/Theme_Color"
+        android:textSize="15dp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

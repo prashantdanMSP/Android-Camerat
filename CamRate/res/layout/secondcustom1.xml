@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="left" >
+
+    <include
+        android:id="@+id/include_layout"
+        layout="@layout/customtitlebar_camera" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_layout" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/imgGridDisplay"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/grid_large" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/RelativeLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/include_layout"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onWebClick"
+            android:src="@drawable/btngallery"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/imgCameraImportWeb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onWebClick"
+            android:src="@drawable/btngallery" />
+
+        <ImageButton
+            android:id="@+id/imgCameraWeb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/btncamerachange" />
+
+        <ImageView
+            android:id="@+id/chkFlashLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/btnflashoff" />
+
+        <ImageButton
+            android:id="@+id/imageButtonGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onChangeCameraClick"
+            android:src="@drawable/btngrid" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onChangeCameraClick"
+            android:src="@drawable/btngrid"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/skBarVideoRecording"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relvideoBottom"
+        android:layout_alignParentLeft="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:max="100"
+        android:progress="0"
+        android:progressDrawable="@drawable/progress"
+        android:thumb="@drawable/video_thumb"
+        android:thumbOffset="0px"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/linearMinimumVideoInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/skBarVideoRecording"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:visibility="invisible" >
+
+        <TextView
+            android:id="@+id/lblMinimumVideoInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/popup_msgbg"
+            android:padding="5dp"
+            android:text="Record at least to here"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/Theme_Color" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblMinimumVideoInfo"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/popup_msp_arow" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relvideoBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/Black" >
+
+        <TextView
+            android:id="@+id/chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:text="0.00"
+            android:textColor="@color/White"
+            android:textSize="30sp"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/btnDeleteVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:onClick="onDeleteVideoSegment"
+            android:src="@drawable/btn_video_del"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/btnSelectVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:onClick="onSelectVideoSegment"
+            android:src="@drawable/btndelvideo"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/btnswitchToCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:src="@drawable/btnswitchcamera"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:id="@+id/btnCameraTakeVideo"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/btnvideo"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_centerbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <ImageButton
+                android:id="@+id/btnCameraTakePicture"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/btncamera"
+                android:onClick="onTakePicture" />
+
+            <ImageButton
+                android:id="@+id/btnswitchToVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:src="@drawable/btnswitchvideo" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

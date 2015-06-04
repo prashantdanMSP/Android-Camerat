@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="DrawAllocation">
+        <ignore path="src/com/camrate/global/CircularImageView.java" />
+    </issue>
+    <issue id="NewApi">
+        <ignore path="src/com/camrate/MyFeed.java" />
+        <ignore path="src/com/camrate/NewestGridActivity.java" />
+        <ignore path="src/com/camrate/RateItScreen.java" />
+        <ignore path="src/com/camrate/Register.java" />
+        <ignore path="src/com/camrate/SearchImageFromWeb.java" />
+        <ignore path="src/com/camrate/categories/Animals_Pets.java" />
+        <ignore path="src/com/camrate/categories/Category.java" />
+        <ignore path="src/com/camrate/categories/Trending.java" />
+        <ignore path="src/com/camrate/explore/Category.java" />
+        <ignore path="src/com/camrate/explore/Favourite.java" />
+        <ignore path="src/com/camrate/explore/MostReRated.java" />
+        <ignore path="src/com/camrate/explore/NearBy.java" />
+        <ignore path="src/com/camrate/explore/Newest.java" />
+        <ignore path="src/com/camrate/explore/SlidingDrawerActivity.java" />
+        <ignore path="src/com/camrate/explore/Trending.java" />
+        <ignore path="src/com/camrate/global/CircularImageView.java" />
+        <ignore path="src/com/camrate/profile/GeneralUserProfile.java" />
+        <ignore path="src/com/camrate/profile/Profile.java" />
+        <ignore path="src/com/camrate/profile/UserProfile.java" />
+        <ignore path="src/com/camrate/search/SearchTagsDetail.java" />
+    </issue>
+    <issue id="ResourceAsColor" severity="ignore">
+        <ignore path="src/com/camrate/TermsMain.java" />
+        <ignore path="src/com/camrate/profile/EditProfile.java" />
+        <ignore path="src/com/camrate/profile/Followers.java" />
+        <ignore path="src/com/camrate/profile/Following.java" />
+        <ignore path="src/com/camrate/profile/Notification.java" />
+        <ignore path="src/com/camrate/search/Search.java" />
+    </issue>
+    <issue id="SdCardPath">
+        <ignore path="src/com/camrate/ShareItScreen.java" />
+    </issue>
+    <issue id="SimpleDateFormat">
+        <ignore path="src/com/camrate/MyFeedAdapter.java" />
+    </issue>
+    <issue id="UseValueOf" severity="ignore" />
+</lint>

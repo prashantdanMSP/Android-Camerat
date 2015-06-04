@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent" >
+
+    <LinearLayout
+        android:id="@+id/linearhead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imglstseen"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/clocksymbol"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvlastseen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/lbl_PostAgo_Color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txtpostedbyvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/Black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtlocationvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="100dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/lbl_loc_Color"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative2explr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearhead" >
+
+        <ImageView
+            android:id="@+id/imguserpost"
+            android:layout_width="wrap_content"
+            android:layout_height="150dip"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/imageloading" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@style/ProgressBarStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:indeterminate="false"
+            android:max="100"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txtratelbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imguserpost"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="26dp"
+            android:text=""
+            android:textColor="#FFF"
+            android:textSize="@dimen/dmavgrate"
+            android:textStyle="normal"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/rel_Gradient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom" >
+
+            <ImageView
+                android:id="@+id/imagegradient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ringgradient1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:paddingBottom="2dp" >
+
+                <ImageView
+                    android:id="@+id/imguserrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/five_star" />
+
+                <TextView
+                    android:id="@+id/txtratecountlbl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="1"
+                    android:textColor="@color/White"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imguserpostvideo"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/btnvideoplay"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</RelativeLayout>

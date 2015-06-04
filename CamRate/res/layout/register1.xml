@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <include
+        android:id="@+id/include_layout"
+        layout="@layout/customtitlebar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/include_layout"
+        android:background="@android:color/white" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/relative1"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="#FF0000"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/txtErrorShow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textSize="15dp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeInner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/imgProfilepic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/addprofilepic" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeInner1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/imgProfilepic"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/txt_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/lbl_color_uname"
+                        android:textSize="@dimen/lblsize" />
+
+                    <TextView
+                        android:id="@+id/txt_useremail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/txt_username"
+                        android:layout_below="@+id/txt_username"
+                        android:text=""
+                        android:textColor="@color/lbl_color_email"
+                        android:textSize="@dimen/lblsize" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlblcountry"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/txtlbl_country"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:text="Select Your Country"
+                    android:textColor="@color/lbl_color"
+                    android:textSize="@dimen/lblsize" />
+
+                <TextView
+                    android:id="@+id/txtlbl_country_req"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.50"
+                    android:text="(optional)"
+                    android:textColor="@color/lbl_color_op"
+                    android:textSize="@dimen/lblsize" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/sp_country"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/spbg"
+                android:entries="@array/country_arrays"
+                android:prompt="@string/cntry" />
+
+            <LinearLayout
+                android:id="@+id/linearlblcity"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sp_country"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/txtlbl_city"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:text="Enter Your City"
+                    android:textColor="@color/lbl_color"
+                    android:textSize="@dimen/lblsize" />
+
+                <TextView
+                    android:id="@+id/txtlbl_city_req"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.50"
+                    android:text="(optional)"
+                    android:textColor="@color/lbl_color_op"
+                    android:textSize="@dimen/lblsize" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/sp_city"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/background_boxfill"
+                android:ems="10"
+                android:hint="@string/city"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/linearlblgender"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sp_city"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/txtlbl_gender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:text="Select Your Gender"
+                    android:textColor="@color/lbl_color"
+                    android:textSize="@dimen/lblsize" />
+
+                <TextView
+                    android:id="@+id/txtlbl_gender_req"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.50"
+                    android:text="(optional)"
+                    android:textColor="@color/lbl_color_op"
+                    android:textSize="@dimen/lblsize" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/sp_gender"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/spbg"
+                android:prompt="@string/gender" />
+
+            <LinearLayout
+                android:id="@+id/linearlblbdate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sp_gender"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/txtlbl_bdate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.50"
+                    android:text="Select Your BirthDay"
+                    android:textColor="@color/lbl_color"
+                    android:textSize="@dimen/lblsize" />
+
+                <TextView
+                    android:id="@+id/txtlbl_bdate_req"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.50"
+                    android:text="(optional)"
+                    android:textColor="@color/lbl_color_op"
+                    android:textSize="@dimen/lblsize" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnbday"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/spbg"
+                android:text="@string/bday"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_Done"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/loginheight"
+                android:layout_gravity="right"
+                android:layout_marginBottom="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_themebg"
+                android:text="Done"
+                android:textColor="@color/White"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

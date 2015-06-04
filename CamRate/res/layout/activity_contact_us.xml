@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/White" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/titlebarbg" >
+
+        <Button
+            android:id="@+id/btncontactUS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:drawableLeft="@drawable/btnback"
+            android:text=""
+            android:textColor="@color/Black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/lblInviteFriTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="Contact Us"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/Black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/RelativeLayout1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/txtContactName"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/background_boxfill2"
+                android:ems="10"
+                android:hint="Name"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textSize="14sp" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/txtContactEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/txtContactName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_boxfill2"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtContactSub"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/txtContactEmail"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_boxfill2"
+                android:ems="10"
+                android:hint="Subject"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtContactMessage"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:layout_below="@+id/txtContactSub"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_boxfill2"
+                android:ems="10"
+                android:gravity="start"
+                android:hint="Leave a Message"
+                android:inputType="textMultiLine"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:singleLine="false"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/btnContactSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txtContactMessage"
+                android:layout_below="@+id/txtContactMessage"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/btn_submitbg"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="8dp"
+                android:text="Submit"
+                android:textAlignment="center"
+                android:textColor="@color/White"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/lblFeedbackQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/btnContactSubmit"
+                android:layout_marginTop="10dp"
+                android:text="@string/or_email_us_on_info_camrate_it"
+                android:textColor="@color/light_Grey"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

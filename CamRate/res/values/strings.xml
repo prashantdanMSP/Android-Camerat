@@ -1,0 +1,34 @@
+<resources>
+
+    <string name="app_name">CamRate</string>
+    <string name="cntry">Your Country</string>
+    <string name="city">Your City</string>
+    <string name="gender">Your Gender</string>
+    <string name="age">Your Age</string>
+    <string name="bday">Your Birthday</string>
+    <string name="menu_item_clear_memory_cache">Clear memory cache</string>
+    <string name="menu_item_clear_disc_cache">Clear disc cache</string>
+    <string name="menu_item_pause_on_scroll">Pause on scroll</string>
+    <string name="menu_item_pause_on_fling">Pause on fling</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+    <string name="Grid">Grid Off</string>
+    <string name="strAns">Answer</string>
+    <string name="or_email_us_on_info_camrate_it">or email us on info@camrate.it</string>
+    <string name="strFeedback">Thank you for taking the time to give us valuable feedback. We really apprecite your help and input.</string>
+    <string name="strFeedbackfinish">Thank you for the feedback. You can always come back to this form and give us more new feedback whenever you want or just send us an email at info@camrate.com.</string>
+    <string name="title_activity_show_contacts">ShowContactsActivity</string>
+    <string name="title_activity_twitter_friends">TwitterFriendsActivity</string>
+    <string name="app_id">438853289595566</string>
+    <string name="frgt_pass"><u>Forgot your password?</u></string>
+
+    <string-array name="country_arrays">
+        <item>Your Country</item>
+    </string-array>
+
+    <string name="pull_to_refresh_tap_label">Pull down to refresh</string>
+    <string name="pull_to_refresh_release_label">Pull down to refresh</string>
+    <string name="pull_to_refresh_refreshing_label">Loading...</string>
+    <string name="pull_to_refresh_pull_label">Pull down to refresh</string>
+
+</resources>

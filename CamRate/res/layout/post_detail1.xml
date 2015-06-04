@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.camrate"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:weightSum="2" >
+
+    <include
+        android:id="@+id/include_layout"
+        layout="@layout/customtitlebar" />
+
+    <ScrollView
+        android:id="@+id/scrollview1"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/include_layout"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" >
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:id="@+id/relative1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view1" >
+
+                <ImageView
+                    android:id="@+id/userimg"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/imglctn"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/tvusername"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/userimg"
+                    android:background="@drawable/locsymbol" />
+
+                <TextView
+                    android:id="@+id/tvuserlocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/userimg"
+                    android:layout_below="@+id/tvusername"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/imglctn"
+                    android:maxLines="1"
+                    android:maxWidth="100dp"
+                    android:text=""
+                    android:textColor="@color/lbl_loc_Color"
+                    android:textSize="10dp" />
+
+                <ImageView
+                    android:id="@+id/imginvestorbadge"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/img_levelTag"
+                    android:gravity="center"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btn_feedfavorite"
+                    android:layout_width="100dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imglstseen"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/img_levelTag"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_toLeftOf="@+id/tvlastseen"
+                    android:background="@drawable/clocksymbol"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvlastseen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="6dp"
+                    android:text=""
+                    android:textColor="@color/lbl_PostAgo_Color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tvusername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/imglctn"
+                    android:layout_alignTop="@+id/userimg"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/Black"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relInner"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/postRatebg_height"
+                android:layout_below="@+id/relative1"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:background="@color/Theme_Color" >
+
+                <ImageView
+                    android:id="@+id/imguserrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/five_star_detail" />
+
+                <TextView
+                    android:id="@+id/tvRateName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/imguserrate"
+                    android:text="(5)"
+                    android:textColor="@color/White"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtlblisRated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="Rated"
+                    android:textColor="@color/White"
+                    android:textSize="14sp"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/imgisRated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/txtlblisRated"
+                    android:src="@drawable/tick"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relInner" >
+
+                <RelativeLayout
+                    android:id="@+id/relativeimagepost"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" >
+
+                    <ProgressBar
+                        android:id="@+id/progress"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:visibility="gone" />
+
+                    <VideoView
+                        android:id="@+id/VideoView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:visibility="invisible" />
+
+                    <com.camrate.global.PieDonutChart
+                        android:id="@+id/imguserrate1"
+                        android:layout_width="300dip"
+                        android:layout_height="300dip"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:color/transparent"
+                        android:visibility="gone"
+                        custom:colorCircleInside="@null"
+                        custom:highlightStrength="1.15"
+                        custom:ratioCircleInside="0.8" />
+
+                    <ImageView
+                        android:id="@+id/imguserpost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/imguserpostvideo"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/btnvideoplay"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/imguserpausevideo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/pauseicon"
+                        android:visibility="invisible" />
+
+                    <com.camrate.global.CircleDisplay
+                        android:id="@+id/circleDisplay"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvratename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/relativeimagepost"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="2dp"
+                    android:text="1 - LIKE"
+                    android:textColor="#FFFF"
+                    android:textSize="16dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imgavgrating"
+                    android:layout_width="fill_parent"
+                    android:layout_height="16dp"
+                    android:layout_below="@+id/relativeimagepost"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnTap_toShare"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/loginheight"
+                    android:layout_below="@+id/relativeimagepost"
+                    android:background="@drawable/tapto_rate"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/linearBubble"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/relativeimagepost"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/imgbubble1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/bubble1" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relativeTick"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeimagepost"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff"
+                    android:gravity="center" >
+
+                    <include
+                        android:id="@+id/relative_slider"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        layout="@layout/rating_main1"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewrate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/relativeTick"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/postdetailseprator" />
+
+                <TextView
+                    android:id="@+id/tvpostname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_below="@+id/viewrate"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:textColor="@color/lbl_Tag_Color"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvpostdesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvpostname"
+                    android:maxLength="350"
+                    android:text=""
+                    android:textColor="@color/lbl_Tag_Color"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeComment"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/relative2" >
+
+                <TextView
+                    android:id="@+id/tvcommentusername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvdesccomment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_toRightOf="@+id/tvcommentusername"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="12dp"
+                    android:textStyle="normal"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvTotalcomment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:text="0 Comment"
+                    android:textColor="@color/lbl_post_comment"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:visibility="visible" />
+
+                <ListView
+                    android:id="@+id/listComment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTotalcomment"
+                    android:layout_centerHorizontal="true"
+                    android:cacheColorHint="#0000"
+                    android:divider="#FFFFFF"
+                    android:dividerHeight="0dp"
+                    android:fadingEdge="none"
+                    android:scrollingCache="true"
+                    android:visibility="gone" >
+                </ListView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RelativeComment" >
+
+                <Button
+                    android:id="@+id/bntRateFeed"
+                    android:layout_width="45dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnStatsFeed"
+                    android:layout_width="45dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/btnCommentFeed"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnCommentFeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_toRightOf="@+id/bntRateFeed"
+                    android:background="@color/lbl_btn_color"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Comment"
+                    android:textAlignment="center"
+                    android:textColor="@color/lbl_btn_text_color"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnShareFeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/btnStatsFeed"
+                    android:background="@color/lbl_btn_color"
+                    android:text="Share"
+                    android:textColor="@color/lbl_btn_text_color"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnmorefeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/btnShareFeed"
+                    android:background="@drawable/btnmore" />
+
+                <TextView
+                    android:id="@+id/tvTotalCommentsFeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="70dp"
+                    android:text="0"
+                    android:textColor="#CCCCCC"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvlblcomments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:text="Comments"
+                    android:textColor="#CCCCCC"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvTotalRatingFeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tvlblcomments"
+                    android:layout_marginRight="40dp"
+                    android:text="1"
+                    android:textColor="#CCCCCC"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvlblrating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tvlblcomments"
+                    android:layout_marginRight="5dp"
+                    android:text="Rates"
+                    android:textColor="#CCCCCC"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearexpand"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="80dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/post_detailbg"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/White"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/relativepost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp" >
+
+                        <TextView
+                            android:id="@+id/txtlblPostdetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="Post Details"
+                            android:textColor="@color/lbl_post_detailbg"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imgPostdetailarrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/uparrow" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txtlblTapratetoexpand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Tap ratings to expand"
+                        android:textColor="@color/lbltapratetoexpand"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <ExpandableListView
+                        android:id="@+id/lvExp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:cacheColorHint="#00000000"
+                        android:divider="#FFFFFF"
+                        android:dividerHeight="0dp"
+                        android:groupIndicator="@null" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

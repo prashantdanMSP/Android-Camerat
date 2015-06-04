@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/RelativeLayout2" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/imgGridDisplay"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/grid_large" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <FrameLayout
+                android:id="@+id/frameSelectDeleteVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="13dp"
+                android:layout_marginLeft="32dp" >
+
+                <ImageButton
+                    android:id="@+id/btnDeleteVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:onClick="onDeleteVideoSegment"
+                    android:src="@drawable/btn_video_del" />
+
+                <ImageButton
+                    android:id="@+id/btnSelectVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:onClick="onSelectVideoSegment"
+                    android:src="@drawable/btndel_video" />
+            </FrameLayout>
+
+            <ImageButton
+                android:id="@+id/btnswitchToCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/frameSelectDeleteVideo"
+                android:layout_toRightOf="@+id/frameSelectDeleteVideo"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:src="@drawable/btnswitchcamera"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/btnswitchToVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/btnswitchToCamera"
+                android:layout_marginLeft="45dp"
+                android:layout_toRightOf="@+id/btnswitchToCamera"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:src="@drawable/btnswitchvideo" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/RelativeLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onWebClick"
+            android:src="@drawable/btngallery"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/imgCameraImportWeb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onWebClick"
+            android:src="@drawable/btngallery" />
+
+        <ImageButton
+            android:id="@+id/imgCameraWeb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onChangeCameraClick"
+            android:src="@drawable/btncamerachange" />
+
+        <ImageView
+            android:id="@+id/chkFlashLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/btnflashoff" />
+
+        <ImageButton
+            android:id="@+id/imageButtonGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onChangeCameraClick"
+            android:src="@drawable/btngrid" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="onChangeCameraClick"
+            android:src="@drawable/btngrid"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relvideoBottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <CheckBox
+            android:id="@+id/chkVideoOrCameraMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:button="@drawable/background_mode_videoorcamera"
+            android:gravity="center_vertical"
+            android:visibility="visible" />
+
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/btnCameraTakePicture"
+            android:format="%s"
+            android:gravity="center_vertical"
+            android:textColor="@color/Black"
+            android:textSize="40sp"
+            android:visibility="visible" />
+
+        <SeekBar
+            android:id="@+id/skBarVideoRecording"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnCameraTakePicture"
+            android:layout_alignParentLeft="true"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress"
+            android:thumb="@drawable/thumb"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/linearMinimumVideoInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/skBarVideoRecording"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/lblMinimumVideoInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/skBarVideoRecording"
+                android:layout_centerHorizontal="true"
+                android:background="#0080FF"
+                android:text="Record at least to here"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#FFF" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/downarrow" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnCameraTakeVideo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignLeft="@+id/linearMinimumVideoInfo"
+            android:layout_marginLeft="23dp"
+            android:background="@drawable/btnvideo"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/btnCameraTakePicture"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignLeft="@+id/linearMinimumVideoInfo"
+            android:layout_marginLeft="23dp"
+            android:background="@drawable/btncamera"
+            android:onClick="onTakePicture" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <RelativeLayout
+        android:id="@+id/relativecmnt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/imgAlertUser"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/noimageuser"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/txtValueForAlert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/txtValueFordate"
+            android:layout_toRightOf="@+id/imgAlertUser"
+            android:maxLines="2"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/lblnotificationdesc"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnnext"
+            android:layout_width="wrap_content"
+            android:layout_height="25dip"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="20dip"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:id="@+id/txtValueFordate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/imglstseen"
+            android:text=""
+            android:textColor="@color/lblcommentago"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/imglstseen"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tvlastseen"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/clocksymbol" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativecmnt"
+        android:background="@android:color/darker_gray"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/userimg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/imglctn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvusername"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/userimg"
+            android:background="@drawable/locsymbol" />
+
+        <TextView
+            android:id="@+id/tvuserlocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/userimg"
+            android:layout_below="@+id/tvusername"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/imglctn"
+            android:maxLines="1"
+            android:maxWidth="100dp"
+            android:text=""
+            android:textColor="@color/lbl_loc_Color"
+            android:textSize="10dp" />
+
+        <ImageView
+            android:id="@+id/imginvestorbadge"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/img_levelTag"
+            android:gravity="center"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btn_feedfavorite"
+            android:layout_width="100dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@null"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imglstseen"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/img_levelTag"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="6dp"
+            android:layout_toLeftOf="@+id/tvlastseen"
+            android:background="@drawable/clocksymbol"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvlastseen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="6dp"
+            android:text=""
+            android:textColor="@color/lbl_PostAgo_Color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvusername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imglctn"
+            android:layout_alignTop="@+id/userimg"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/Black"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relInner"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/postRatebg_height"
+        android:layout_below="@+id/relative1"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="5dp"
+        android:background="@color/Theme_Color" >
+
+        <ImageView
+            android:id="@+id/imguserrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/five_star" />
+
+        <TextView
+            android:id="@+id/tvRateName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/imguserrate"
+            android:text="(5)"
+            android:textColor="@color/White"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtlblisRated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="Rated"
+            android:textColor="@color/White"
+            android:textSize="14sp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/imgisRated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/txtlblisRated"
+            android:src="@drawable/tick"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relInner" >
+
+        <RelativeLayout
+            android:id="@+id/relativeimagepost"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible" >
+
+            <VideoView
+                android:id="@+id/VideoView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:visibility="invisible" />
+
+            <com.camrate.global.CircleDisplay
+                android:id="@+id/circleDisplay"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imguserpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/imguserpostvideo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/btnvideoplay"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/imguserpausevideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pauseicon"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/linearBubble"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imguserpost"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imgbubble1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/bubble1"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:indeterminate="false"
+                android:max="100"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linearfeedslider"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeimagepost"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btnTap_toShare"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/loginheight"
+                android:background="@drawable/tapto_rate"
+                android:visibility="visible" />
+
+            <View
+                android:id="@+id/viewrate"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/btnTap_toShare"
+                android:layout_marginTop="2dp"
+                android:background="@color/postdetailseprator"
+                android:visibility="visible" />
+
+            <include
+                android:id="@+id/relative_slider"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                layout="@layout/rating_main1"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvpostname"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@+id/linearfeedslider"
+            android:layout_marginTop="5dp"
+            android:text="test"
+            android:textColor="@color/lbl_Tag_Color"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvpostdesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvpostname"
+            android:autoLink="web"
+            android:maxLength="350"
+            android:text="test"
+            android:textColor="@color/lbl_Tag_Color"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative2"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:descendantFocusability="blocksDescendants" >
+
+        <Button
+            android:id="@+id/bntRateFeed"
+            android:layout_width="45dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="5dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnCommentFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_toRightOf="@+id/bntRateFeed"
+            android:background="@color/lbl_btn_color"
+            android:text="Comments"
+            android:textAlignment="center"
+            android:textColor="@color/lbl_btn_text_color"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnStatsFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/btnCommentFeed"
+            android:background="@color/lbl_btn_color"
+            android:text="Stats"
+            android:textColor="@color/lbl_btn_text_color"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnShareFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/btnStatsFeed"
+            android:background="@color/lbl_btn_color"
+            android:text="Share"
+            android:textColor="@color/lbl_btn_text_color"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnmorefeed"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/btnShareFeed"
+            android:background="@drawable/btnmore" />
+
+        <TextView
+            android:id="@+id/tvTotalCommentsFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="70dp"
+            android:text="0"
+            android:textColor="#CCCCCC"
+            android:textSize="12dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvlblcomments"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:text="Comments"
+            android:textColor="#CCCCCC"
+            android:textSize="12dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvTotalRatingFeed"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvlblcomments"
+            android:layout_marginRight="40dp"
+            android:text="1"
+            android:textColor="#CCCCCC"
+            android:textSize="12dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvlblrating"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvlblcomments"
+            android:layout_marginRight="5dp"
+            android:text="Rates"
+            android:textColor="#CCCCCC"
+            android:textSize="12dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

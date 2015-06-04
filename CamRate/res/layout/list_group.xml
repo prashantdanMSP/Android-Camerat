@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearlove"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/imglove"
+            android:layout_width="32dp"
+            android:layout_height="@dimen/dmBall"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/filter_5_sel" />
+
+        <ProgressBar
+            android:id="@+id/progressbarcal"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:progress="100"
+            android:progressDrawable="@drawable/progress" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+              
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/txtcountlove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="(1)"
+                    android:layout_alignParentLeft="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/Theme_Color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtloveavg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/txtcountlove"
+                    android:gravity="right"
+                    android:text="100%"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/per_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/test1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="(1)"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/Theme_Color"
+                    android:textSize="14sp"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/test2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@+id/test1"
+                    android:gravity="right"
+                    android:text="100%"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/per_color"
+                    android:textSize="14sp"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+   
+
+</LinearLayout>

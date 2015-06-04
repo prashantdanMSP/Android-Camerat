@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:orientation="horizontal" >
+
+    <View
+        android:id="@+id/viewseprator1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/listseprator" />
+
+    <RelativeLayout
+        android:id="@+id/ralativechild"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewseprator1"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/next"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imgSearchUser"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/noimageuser" />
+
+        <TextView
+            android:id="@+id/txtValueUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imgSearchUser"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/imgSearchUser"
+            android:text=" "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/lblpostDetailgrpname"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvlastseen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtValueUser"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/imgSearchUser"
+            android:text=""
+            android:textColor="@color/lbl_PostAgo_Color"
+            android:textSize="11sp" >
+        </TextView>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewseprator2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ralativechild"
+        android:layout_marginLeft="10dp"
+        android:background="@color/listseprator" />
+
+</RelativeLayout>

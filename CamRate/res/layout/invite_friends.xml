@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/include_layout"
+        layout="@layout/customtitlebar" />
+
+    <LinearLayout
+        android:id="@+id/LinearEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/imginvitecontact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/contact_icon" />
+
+        <TextView
+            android:id="@+id/lblinvite_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="Invite Friends via Email"
+            android:textColor="@color/Black"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/imgemailarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/list_arrow1" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewEmail"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/Theme_Color" />
+
+    <LinearLayout
+        android:id="@+id/LinearTextMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/imginvitetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/contact_icon" />
+
+        <TextView
+            android:id="@+id/lblinvite_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="Invite Friends via Text Message"
+            android:textColor="@color/Black"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/imgtextarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/list_arrow1" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewText"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/Theme_Color" />
+
+    <LinearLayout
+        android:id="@+id/LinearTwitter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/imginvitetwitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tw_icon" />
+
+        <TextView
+            android:id="@+id/lblinvite_twitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="Invite Friends via Twitter"
+            android:textColor="@color/Black"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/imgtwitterarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/list_arrow1" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewTwitter"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/Theme_Color" />
+
+</LinearLayout>

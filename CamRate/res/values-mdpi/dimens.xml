@@ -1,0 +1,14 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="dmBall">22dp</dimen>
+    <dimen name="dmProfile">12dp</dimen>
+    <dimen name="dmProfileName">14dp</dimen>
+    <dimen name="dmavgrate">12dp</dimen>
+    <dimen name="dmContentHeight">365dp</dimen>
+    <dimen name="loginheight">30dp</dimen>
+    <dimen name="postRatebg_height">35dp</dimen>
+    <dimen name="statebg">100dp</dimen>
+</resources>

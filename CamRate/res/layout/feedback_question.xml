@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout11"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/titlebarbg" >
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:background="@null"
+            android:drawableLeft="@drawable/btnback"
+            android:text="" />
+        <TextView
+            android:id="@+id/lblInviteFriTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="CamRate Feedback"
+            android:textColor="@color/Black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RelativeLayout11"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="30dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/feedback_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/lbltxtfeedback_que1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="What do you think of camrate?"
+                    android:textColor="@color/lblfeedbackquestioncolor"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/lbltxtfeedback_slider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbltxtfeedback_que1"
+                    android:layout_marginTop="5dp"
+                    android:text="Use the slider below to select a score."
+                    android:textColor="@color/Theme_Color"
+                    android:textSize="11sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearBubble"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/feedback_relative"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imgbubble1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/bubble1" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeTick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/feedback_relative"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff"
+                android:gravity="center" >
+
+                <include
+                    android:id="@+id/relative_slider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    layout="@layout/rating_main1"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/lbltxtfeedback_que2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Do you have any other comments or suggestions?"
+                android:textColor="@color/lblfeedbackquestioncolor"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/lbltxtfeedback_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbltxtfeedback_que1"
+                android:layout_marginTop="5dp"
+                android:text="Write a message in the box below."
+                android:textColor="@color/Theme_Color"
+                android:textSize="11sp" />
+
+            <EditText
+                android:id="@+id/edt_comments_suggestions"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_boxfill"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="Write a message here"
+                android:inputType="textMultiLine"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/lblfeedbackquestioncolor"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/btnSubmit_Feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_themebg"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:text="Submit"
+                android:textColor="@color/White"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

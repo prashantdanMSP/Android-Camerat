@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <include
+        android:id="@+id/include_layout"
+        layout="@layout/customtitlebar" />
+
+    <LinearLayout
+        android:id="@+id/linearmainsearch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_layout"
+        android:background="@color/btnsearchbg"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <RelativeLayout
+            android:id="@+id/relativesearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1" >
+
+            <EditText
+                android:id="@+id/serchText1"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/background_boxfill"
+                android:drawableLeft="@android:drawable/ic_menu_search"
+                android:ems="10"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:lines="1"
+                android:singleLine="true"
+                android:textSize="14sp" >
+            </EditText>
+
+            <Button
+                android:id="@+id/btnclose"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignBaseline="@+id/serchText1"
+                android:layout_alignBottom="@+id/serchText1"
+                android:layout_alignRight="@+id/serchText1"
+                android:layout_marginRight="19dp"
+                android:background="@drawable/close"
+                android:gravity="left"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativesearchbtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btnSearchTag"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/btn_themebg"
+                android:text="Tag"
+                android:textColor="@color/White"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnSearchUser"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/btnSearchTag"
+                android:background="@drawable/btn_themebg_unsel"
+                android:text="User"
+                android:textColor="@color/White"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnSearchLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/btnSearchUser"
+                android:background="@drawable/btn_themebg_unsel"
+                android:text="Location"
+                android:textColor="@color/White"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtlblValueSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearmainsearch"
+        android:layout_marginLeft="5dip"
+        android:text="Result for"
+        android:textColor="@color/lblsearchfortext"
+        android:textSize="14sp"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layoutfooter"
+        android:layout_below="@+id/txtlblValueSearch" >
+
+        <LinearLayout
+            android:id="@+id/linear_tag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" >
+
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/listViewTag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                ptr:ptrMode="pullFromEnd" >
+            </com.handmark.pulltorefresh.library.PullToRefreshListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_user"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible" >
+
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/listViewUser"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                ptr:ptrMode="pullFromEnd" >
+            </com.handmark.pulltorefresh.library.PullToRefreshListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_loc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible" >
+
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                xmlns:ptr="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/listViewLoc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                ptr:ptrMode="pullFromEnd" >
+            </com.handmark.pulltorefresh.library.PullToRefreshListView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

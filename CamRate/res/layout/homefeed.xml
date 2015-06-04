@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/include_layout"
+        layout="@layout/myfeedtitlebar" />
+
+    <ListView
+        android:id="@+id/listMyFeedPostFailed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include_layout"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:visibility="gone" >
+    </ListView>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/listMyFeedList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/listMyFeedPostFailed"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:dividerHeight="0dp"
+        android:scrollbarStyle="insideOverlay"
+        android:visibility="visible"
+        ptr:ptrMode="both" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <include
+        layout="@layout/rateposted"
+        android:visibility="gone" />
+
+</RelativeLayout>

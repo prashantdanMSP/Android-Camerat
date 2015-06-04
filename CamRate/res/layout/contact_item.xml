@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/lblFacebookFriendsItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btnContactFollowing"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:background="#64FE2E"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="Following"
+        android:textColor="#FFF"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnContactInvite"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:background="#FF00BF"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="Invite"
+        android:textColor="#FFF"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnContactInvited"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:background="#F00"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="Invited"
+        android:textColor="#FFF"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnContactFollow"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:background="#00BFFF"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="Follow"
+        android:textColor="#FFF"
+        android:visibility="gone" />
+
+</LinearLayout>
